@@ -1,12 +1,12 @@
 import React from "react";
 import Todo from "../Todo";
 
-function TodoList({todos,setTodos}) { // Listelemek için oluşturduğumuz state'i props olarak burda karşılıyoruz
+function TodoList({todos,setTodos,filteredTodos}) { // Listelemek için oluşturduğumuz state'i props olarak burda karşılıyoruz
   return (
     <div className="todo-container">
       <div className="todo-list">
         {
-          todos.map((todo)=>(
+          filteredTodos.map((todo)=>(
 
             <Todo 
             text={todo.text}
